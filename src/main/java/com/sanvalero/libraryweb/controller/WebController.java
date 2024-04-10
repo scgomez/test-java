@@ -23,10 +23,10 @@ public class WebController {
         return "index";
     }
 
-    @RequestMapping(value = "/catalog", method = GET)
+    @RequestMapping( value = "/catalog" , method = RequestMethod.GET)
     public String catalog(Model model) {
-        List<Book> books = bookService.findAllBooks();
-        model.addAttribute("books", books);
+        List<Book> bookList = bookService.findAllBooks();
+        model.addAttribute("books" , bookList);
         return "catalog";
     }
 
