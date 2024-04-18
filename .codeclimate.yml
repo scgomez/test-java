@@ -1,0 +1,12 @@
+version: "2"
+plugins:
+  checkstyle:
+    enabled: true
+    config:
+      properties:
+        maxAllowedLineLength: 120
+      checks:
+        Javadoc: error
+        CommentContent: error
+        MatchCommentPattern:
+          pattern: "(?i)Password" # Esto hará que "Password" sea un error en los comentarios, con la opción (?i) se ignora si es mayúscula o minúscula
